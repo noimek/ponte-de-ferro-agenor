@@ -1,6 +1,5 @@
-// Animação ao carregar a página
-document.addEventListener("DOMContentLoaded", () => {
-  const heroContent = document.querySelector(".hero .content");
-  heroContent.style.transition = "opacity 2s ease";
-  heroContent.style.opacity = "1";
+// Rolagem suave para o topo ao clicar no link no rodapé
+document.querySelector('footer a').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 });
