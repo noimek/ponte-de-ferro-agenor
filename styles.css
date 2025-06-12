@@ -1,9 +1,109 @@
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: Arial, sans-serif; background:#f4f4f4; color:#333; }
-header { background:#2c3e50; color:#ecf0f1; text-align:center; padding:2rem; }
-.hero img { width:100%; max-height:400px; object-fit:cover; }
-section { padding:2rem; max-width:1000px; margin:1rem auto; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
-.gallery .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:10px; margin-top:1rem; }
-.gallery img { width:100%; border-radius:4px; height:160px; object-fit:cover; }
-footer { text-align:center; padding:1rem; background:#2c3e50; color:#bdc3c7; margin-top:2rem; }
-ul { margin-top:1rem; padding-left:1.2rem; }
+/* Estilo Geral */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.5;
+  background: #f4f4f4;
+}
+
+/* Cabeçalho */
+header {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 10px 0 0;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero .background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(0, 128, 255, 0.8), rgba(0, 0, 255, 0.6));
+  clip-path: circle(50% at 50% 50%);
+  animation: animate-bg 10s infinite alternate;
+}
+
+@keyframes animate-bg {
+  0% {
+    clip-path: circle(50% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(75% at 50% 50%);
+  }
+}
+
+.hero .content {
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* Seções */
+section {
+  padding: 40px 20px;
+  background: white;
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 900px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+/* Galeria */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+}
