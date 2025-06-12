@@ -1,84 +1,57 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ponte Agenor Alves - Colatina</title>
-  <style>
-    body { font-family: Arial, sans-serif; background: #f4f4f4; margin:0; padding:0; }
-    header, footer { background:#333; color:#fff; text-align:center; padding:1em 2em; }
-    nav { background:#555; display:flex; justify-content:center; padding:.5em; }
-    nav a { color:#fff; margin:0 1em; text-decoration:none; }
-    section { background:#fff; margin:1em; padding:2em; border-radius:8px; }
-    .gallery img { max-width:100%; margin-bottom:1em; border-radius:5px; }
-    .columns { display:flex; flex-wrap:wrap; gap:2em; }
-    .columns > div { flex:1; min-width:200px; }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponte Agenor Alves – Colatina, ES</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Ponte Agenor Alves</h1>
+    <p>Colatina, Espírito Santo – Patrimônio de ferro e história</p>
+  </header>
 
-<header>
-  <h1>Ponte de Ferro Agenor Alves</h1>
-  <p>Um marco histórico de Colatina que conecta passado e presente</p>
-</header>
+  <section class="hero">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Ponte_de_ferro_Agenor_Alves.jpg" alt="Ponte Agenor Alves">
+  </section>
 
-<nav>
-  <a href="#historia">História</a>
-  <a href="#galeria">Galeria</a>
-  <a href="#importancia">Importância</a>
-  <a href="#situacao">Situação Atual</a>
-</nav>
+  <section class="history">
+    <h2>História</h2>
+    <p>
+      A Ponte Agenor Alves foi construída na década de 1930 como parte da Estrada de Ferro Vitória a Minas.
+      Com estrutura 100% metálica e rebites originais, ela ligava pontos estratégicos do Espírito Santo e
+      virou símbolo da cidade de Colatina.
+    </p>
+  </section>
 
-<section id="historia">
-  <h2>História da Ponte</h2>
-  <p><strong>Construção Iniciada:</strong> A Companhia Vale do Rio Doce iniciou a ponte para a EFVM, conectando Vitória (ES) a Minas Gerais.</p>
-  <p><strong>Inauguração:</strong> Inaugurada na década de 1930 para transporte ferroviário.</p>
-  <p><strong>Adaptação Urbana:</strong> A ponte passou a servir também pedestres e ciclistas.</p>
-  <p><strong>Patrimônio Histórico:</strong> Reconhecida como patrimônio histórico de Colatina.</p>
-  <p><strong>Reforma e Restauração:</strong> Projetos em andamento desde 2025 para preservação e segurança.</p>
-</section>
+  <section class="status">
+    <h2>Status Atual</h2>
+    <p>
+      Em 2025, a passarela de pedestres foi interditada por risco de desabamento. A ponte sofre com a ferrugem,
+      mas ainda é admirada pela sua beleza arquitetônica e importância histórica.
+    </p>
+  </section>
 
-<section>
-  <h2>Características da Ponte</h2>
-  <div class="columns">
-    <div><strong>🏗️ Estrutura:</strong><br>Ferro e aço, estilo ferroviário dos anos 1930.</div>
-    <div><strong>🚂 Finalidade Original:</strong><br>Transporte de minério e carga pela EFVM.</div>
-    <div><strong>🌊 Localização:</strong><br>Sob o Rio Doce, entre bairros de Colatina.</div>
-    <div><strong>👥 Uso Atual:</strong><br>Presença de pedestres, ciclistas e, ocasionalmente, trens.</div>
-  </div>
-</section>
+  <section class="gallery">
+    <h2>Galeria</h2>
+    <div class="grid">
+      <img src="https://i.imgur.com/mV9dVIk.jpeg" alt="Ponte vista de lado">
+      <img src="https://i.imgur.com/RDg7oqT.jpeg" alt="Passarela da ponte">
+      <img src="https://i.imgur.com/xk8JwMG.jpeg" alt="Detalhes da estrutura enferrujada">
+      <img src="https://i.imgur.com/J7Er6Ct.jpeg" alt="Vista aérea da ponte">
+    </div>
+  </section>
 
-<section id="galeria">
-  <h2>Galeria de Fotos</h2>
-  <div class="gallery">
-    <img src="img/ponte/ponte-lateral.jpg" alt="Estrutura lateral da ponte">
-    <img src="img/ponte/ponte-interditada.jpg" alt="Passarela interditada em reforma">
-    <img src="img/ponte/ponte-corrosao.jpg" alt="Detalhe da corrosão na viga">
-    <img src="img/ponte/placa-ponte-agenor.jpg" alt="Placa da Ponte Agenor Alves">
-  </div>
-</section>
+  <section class="curiosities">
+    <h2>Curiosidades</h2>
+    <ul id="curiosities-list"></ul>
+  </section>
 
-<section id="importancia">
-  <h2>Importância Cultural e Histórica</h2>
-  <p>🔹 <strong>Marco do Desenvolvimento:</strong> Estrutura vital para o escoamento da produção mineira via Vitória.</p>
-  <p>🔹 <strong>Herança Ferroviária:</strong> Parte da histórica EFVM, testemunha da era de ouro das ferrovias nacionais.</p>
-  <p>🔹 <strong>Ícone da Cidade:</strong> Frequentemente destaque em postais e materiais turísticos.</p>
-  <p>🔹 <strong>Acesso Comunitário:</strong> Ligação entre bairros, facilitando o deslocamento diário.</p>
-  <p>🔹 <strong>Quase 100 Anos:</strong> Em uso desde 1930, resistindo como testemunha viva da história local.</p>
-</section>
+  <footer>
+    <p>&copy; 2025 Projeto Noimek. Dados de fontes públicas e jornalísticas.</p>
+  </footer>
 
-<section id="situacao">
-  <h2>Situação Atual</h2>
-  <p>➡️ <strong>Conservação:</strong> A estrutura sofre com desgaste, ferrugem e buracos que comprometem a segurança  [oai_citation:0‡agazeta.com.br](https://www.agazeta.com.br/es/cotidiano/moradores-pedem-por-melhorias-na-ponte-agenor-alves-em-colatina-0723?utm_source=chatgpt.com).</p>
-  <p>➡️ <strong>Reforma:</strong> A Prefeitura iniciou intervenções em maio de 2025, incluindo substituição de elementos metálicos, tratamento anticorrosivo, pintura e reforço estrutural .</p>
-  <p>➡️ <strong>Interdições:</strong> A passarela está parcialmente interditada como medida de prevenção .</p>
-  <p>➡️ <strong>Perspectivas:</strong> O futuro projeto busca reforçar a segurança, manter o valor histórico e promover o potencial turístico.</p>
-</section>
-
-<footer>
-  <p>Ponte Agenor Alves – preservando a história ferroviária de Colatina para as futuras gerações.</p>
-  <p>Site criado e desenvolvido por <strong>João Miguel da Rocha</strong> | 2025</p>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
