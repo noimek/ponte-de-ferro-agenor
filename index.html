@@ -1,74 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ponte Agenor Alves</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  <script defer src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncluRide - Mobilidade Inclusiva</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Ponte Agenor Alves</h1>
-    <p>Uma herança de ferro, história e identidade urbana</p>
-  </header>
 
-  <main>
-    <section>
-      <h2>Contexto Histórico & Construção</h2>
-      <p>
-        A Ponte Agenor Alves, popularmente conhecida como “Ponte de Ferro”, foi construída nos anos 1930 como parte da Estrada de Ferro Vitória a Minas, conectando as margens do Rio Doce em Colatina. Sua concepção foi marcada por técnicas modernas para a época: estrutura metálica composta em partes pré-fabricadas, montada com rebites, e viabilizada por tecnologias avançadas como o “dinossauro” – um guindaste local criado especialmente para lançar vigas em vãos com aproximadamente 25 m.
-      </p>
-      <p>
-        A obra foi tocada pela firma dinamarquesa Christiani & Nielsen, contratada em 1927 para fundações em concreto armado, e recebeu significativo suporte político e técnico – incluindo visita do governador Florentino Ávidos e engenheiros-chefes, como Clóvis Cortes.
-      </p>
-    </section>
+<header>IncluRide — Mobilidade Inclusiva</header>
 
-    <section>
-      <h2>Estrutura e Engenharia</h2>
-      <p>
-        Com cerca de 26 vãos e extensão total de aproximadamente 680 m, a ponte combina pilares de concreto armado e superestrutura metálica, em forma de vigas treliçadas com alma cheia. O pavimento original foi de tábuas de madeira, posteriormente substituído por concreto armado, e recebeu passarela lateral estreita para pedestres.
-      </p>
-      <p>
-        O uso exclusivo de rebites — sem soldas — evidencia a engenharia da época, conferindo durabilidade, mas exigindo manutenção constante. A estrutura forma parte de um conjunto arquitetônico valioso, junto com a antiga estação ferroviária local.
-      </p>
-    </section>
+<div class="container">
 
-    <section>
-      <h2>Papel Urbanístico & Cultural</h2>
-      <p>
-        Mais que via férrea, a Ponte Agenor Alves foi catalisadora do crescimento urbano de Colatina. Ela integrou povoados, estimulou o escoamento da produção cafeeira e tornou-se cartão postal – preservada mesmo após a retirada dos trilhos e renomeação como ponte rodoviária.
-      </p>
-      <p>
-        Sua estética escultural virou cenário para ensaios fotográficos, turismo local e encontros cotidianos. Muitos moradores relatam sentimentos nostálgicos ao cruzá-la, traçando memórias coletivas que resistem à passagem do tempo.
-      </p>
-    </section>
+    <!-- SOLICITAR CORRIDA -->
+    <div class="card">
+        <h2>Solicitar Corrida</h2>
+        <p>Escolha seu destino e o tipo de veículo adaptado.</p>
 
-    <section>
-      <h2>Patologia e Risco</h2>
-      <p>
-        Estudos técnicos recentes apontam condições críticas: corrosão avançada, buracos no piso, corrosão nos trilhos reexpostos e patologias estruturais — a ponto da passarela de pedestres ter sido interditada. O engenheiro Jones Carneiro alertou que o peso da própria estrutura pode representar perigo e recomendou inspeções urgentes.
-      </p>
-      <p>
-        Incidentes como a queda de um pedestre em 2019 reforçam o alerta. Uma licitação para reforma foi aberta e, segundo informações da prefeitura, vistoria da Defesa Civil e projeto de recuperação estão em andamento.
-      </p>
-    </section>
+        <label>Destino:</label>
+        <input type="text" id="destino" placeholder="Digite seu destino">
 
-    <section>
-      <h2>Debates Atuais e Futuro</h2>
-      <p>
-        O grande dilema político e técnico local é entre conservar a ponte histórica ou substituí-la por uma estrutura moderna. Restauradores argumentam que manter a ponte preserva a história urbana e fortalece a identidade da cidade. Já alguns gestores defendem aumentar a segurança via nova construção.
-      </p>
-      <p>
-        Ainda hoje, permanece como um símbolo vivo do Brasil industrial – revelando tensões entre memória, identidade e desenvolvimento útil. O futuro da Ponte Agenor Alves se encontra no equilíbrio entre segurança e preservação.
-      </p>
-    </section>
-  </main>
+        <label>Tipo de Veículo:</label>
+        <select id="tipo">
+            <option value="padrao">Veículo Padrão</option>
+            <option value="adaptado">Adaptado (cadeira de rodas)</option>
+            <option value="treinado">Motorista Treinado em Acessibilidade</option>
+        </select>
 
-  <footer>
-    <p>Desenvolvido por João Miguel da Rocha, Davi Gastaldi, Udson Vinicius Bipo Dias, Ludymila Julia Machado Fachetti e Vitor Pagotto Dias. — Conteúdo com base educacional. Algumas partes adaptadas de reportagens públicas.- 1V02IPI</p>
-    <a href="#">Voltar ao topo</a>
-  </footer>
+        <br><br>
+        <button class="btn" onclick="solicitarCorrida()">Solicitar Corrida</button>
+
+        <p id="status" class="status"></p>
+    </div>
+
+
+    <!-- IA -->
+    <div class="card">
+        <h2>IA — IncluAI</h2>
+        <p>A assistente inteligente da IncluRide ajuda você com dúvidas, segurança e acessibilidade.</p>
+
+        <input type="text" id="iaInput" placeholder="Fale com a IncluAI...">
+        <button class="btn" onclick="respostaIA()">Enviar</button>
+
+        <p id="iaOutput" class="ia-output"></p>
+    </div>
+
+
+    <!-- ACESSIBILIDADE -->
+    <div class="card">
+        <h2>Acessibilidade</h2>
+        <button class="btn" onclick="ativarAcessibilidade()">Ativar Modo Acessível</button>
+    </div>
+
+</div>
+
+<footer>IncluRide © 2025 — Inclusão também é movimento.</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
