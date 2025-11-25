@@ -1,61 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IncluRide - Mobilidade Inclusiva</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>IncluRide — Mobilidade Inclusiva</header>
+    <!-- Header -->
+    <header>
+        <h1 class="logo">IncluRide</h1>
+        <nav>
+            <a href="#sobre">Sobre</a>
+            <a href="#recursos">Recursos</a>
+            <a href="#como-funciona">Como Funciona</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
 
-<div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Mobilidade Inclusiva para Idosos e Pessoas com Deficiência</h2>
+        <p>Uma plataforma pensada para garantir acessibilidade, segurança e autonomia em cada deslocamento.</p>
+        <a href="#sobre" class="btn">Conheça o Projeto</a>
+    </section>
 
-    <!-- SOLICITAR CORRIDA -->
-    <div class="card">
-        <h2>Solicitar Corrida</h2>
-        <p>Escolha seu destino e o tipo de veículo adaptado.</p>
+    <!-- Sobre -->
+    <section id="sobre" class="section">
+        <h2>O que é a IncluRide?</h2>
+        <p>
+            A IncluRide é um aplicativo criado para resolver um problema real: 
+            idosos e pessoas com deficiência enfrentam dificuldades ao solicitar 
+            transportes comuns, como Uber ou táxis tradicionais. 
+        </p>
+        <p>
+            Nosso objetivo é garantir um transporte acessível, seguro e adaptado 
+            para cada necessidade.
+        </p>
+    </section>
 
-        <label>Destino:</label>
-        <input type="text" id="destino" placeholder="Digite seu destino">
+    <!-- Recursos -->
+    <section id="recursos" class="section alt">
+        <h2>Recursos do Aplicativo</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Acessibilidade Total</h3>
+                <p>Botões maiores, leitura de tela e comandos por voz para quem tem dificuldade de visão ou mobilidade.</p>
+            </div>
+            <div class="card">
+                <h3>Motoristas Treinados</h3>
+                <p>Condutores preparados para auxiliar idosos e PCDs com segurança e respeito.</p>
+            </div>
+            <div class="card">
+                <h3>Veículos Adaptados</h3>
+                <p>Carros com rampa, espaço para cadeira de rodas e suporte adequado.</p>
+            </div>
+            <div class="card">
+                <h3>Assistente de IA</h3>
+                <p>Uma IA que ajuda o usuário a solicitar corridas, explicar funções e até alertar a família.</p>
+            </div>
+        </div>
+    </section>
 
-        <label>Tipo de Veículo:</label>
-        <select id="tipo">
-            <option value="padrao">Veículo Padrão</option>
-            <option value="adaptado">Adaptado (cadeira de rodas)</option>
-            <option value="treinado">Motorista Treinado em Acessibilidade</option>
-        </select>
+    <!-- Como Funciona -->
+    <section id="como-funciona" class="section">
+        <h2>Como Funciona?</h2>
+        <ol class="steps">
+            <li>Abra o aplicativo IncluRide.</li>
+            <li>Use botões acessíveis ou comandos de voz para solicitar uma corrida.</li>
+            <li>A IA detecta sua necessidade e escolhe o melhor motorista adaptado.</li>
+            <li>Acompanhe a viagem em tempo real, com alertas para familiares.</li>
+        </ol>
+    </section>
 
-        <br><br>
-        <button class="btn" onclick="solicitarCorrida()">Solicitar Corrida</button>
+    <!-- Contato -->
+    <section id="contato" class="section alt">
+        <h2>Contato</h2>
+        <p>Quer saber mais ou apoiar o projeto?</p>
+        <p><b>Email:</b> contato@incluride.com</p>
+    </section>
 
-        <p id="status" class="status"></p>
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>IncluRide © 2025 — Mobilidade Inclusiva</p>
+    </footer>
 
-
-    <!-- IA -->
-    <div class="card">
-        <h2>IA — IncluAI</h2>
-        <p>A assistente inteligente da IncluRide ajuda você com dúvidas, segurança e acessibilidade.</p>
-
-        <input type="text" id="iaInput" placeholder="Fale com a IncluAI...">
-        <button class="btn" onclick="respostaIA()">Enviar</button>
-
-        <p id="iaOutput" class="ia-output"></p>
-    </div>
-
-
-    <!-- ACESSIBILIDADE -->
-    <div class="card">
-        <h2>Acessibilidade</h2>
-        <button class="btn" onclick="ativarAcessibilidade()">Ativar Modo Acessível</button>
-    </div>
-
-</div>
-
-<footer>IncluRide © 2025 — Inclusão também é movimento.</footer>
-
-<script src="script.js"></script>
 </body>
 </html>
