@@ -1,99 +1,108 @@
-/* Fonte e base */
+/* ======== ESTILO GERAL ======== */
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Playfair Display', serif;
-  background-color: #f4f1ec;
-  color: #2f2f2f;
-  line-height: 1.8;
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: #e9f1ff;
+    color: #1a1a1a;
 }
 
-/* Cabeçalho */
+/* ======== CABEÇALHO ======== */
 header {
-  background-color: #2e2e2e;
-  color: #f4f1ec;
-  padding: 60px 20px;
-  text-align: center;
+    background: linear-gradient(135deg, #2b67f6, #1d4ed8);
+    padding: 28px;
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-header h1 {
-  font-size: 3em;
-  margin: 0;
-  letter-spacing: 1px;
+/* ======== CONTAINER ======== */
+.container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
 }
 
-header p {
-  font-size: 1.2em;
-  margin-top: 10px;
-  font-style: italic;
+/* ======== CARD ======== */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 30px;
+    box-shadow: 0px 6px 20px rgba(0, 40, 120, 0.12);
+    border-left: 6px solid #2b67f6;
+    transition: transform 0.2s ease;
 }
 
-/* Conteúdo */
-main {
-  max-width: 960px;
-  margin: 50px auto;
-  padding: 0 20px;
+.card:hover {
+    transform: translateY(-3px);
 }
 
-section {
-  margin-bottom: 60px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-}
-
+/* ======== TÍTULOS ======== */
 h2 {
-  font-size: 1.8em;
-  color: #1a1a1a;
-  border-left: 4px solid #bfa46f;
-  padding-left: 10px;
-  margin-bottom: 15px;
+    color: #1d4ed8;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
-/* Rodapé */
+/* ======== BOTÕES ======== */
+.btn {
+    display: inline-block;
+    padding: 14px 20px;
+    background: #2b67f6;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    box-shadow: 0px 4px 12px rgba(50, 100, 255, 0.4);
+}
+
+/* ======== INPUTS ======== */
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 10px;
+    border: 1.5px solid #b8caff;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:focus, select:focus {
+    border-color: #2b67f6;
+    box-shadow: 0 0 6px rgba(43, 103, 246, 0.4);
+    outline: none;
+}
+
+/* ======== FEEDBACK ======== */
+.status, .ia-output {
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #1d4ed8;
+}
+
+/* ======== RODAPÉ ======== */
 footer {
-  background-color: #2e2e2e;
-  color: #f4f1ec;
-  text-align: center;
-  padding: 30px 20px;
-  font-size: 0.9em;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #666;
+    font-size: 15px;
 }
 
-footer a {
-  color: #bfa46f;
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-footer a:hover {
-  text-decoration: underline;
-  color: #d9cba5;
-}
-
-/* Animação ao aparecer */
-.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-out;
-}
-
-.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  header h1 {
-    font-size: 2.2em;
-  }
-
-  main {
-    padding: 0 10px;
-  }
-
-  h2 {
-    font-size: 1.5em;
-  }
+/* ======== ACESSIBILIDADE ======== */
+.acessibilidade {
+    font-size: 22px !important;
 }
