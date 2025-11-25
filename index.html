@@ -1,86 +1,106 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>IncluRide - Mobilidade Inclusiva</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IncluRide - Transporte Acessível</title>
 
-  <!-- Link externo (garanta que style.css esteja na mesma pasta) -->
-  <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom right, #005bbb, #0094ff);
+            color: white;
+        }
 
-  <!-- Fallback inline: será usado se o style.css externo NÃO carregar -->
-  <style id="fallback-style">
-    /* fallback visual básico — vai garantir que tudo apareça */
-    html,body {
-      margin:0; padding:0; height:100%; font-family: Arial, sans-serif;
-      background: linear-gradient(135deg,#e6f0ff,#c9dfff);
-      -webkit-font-smoothing:antialiased;
-    }
-    header{ background:#1a73e8; color:white; padding:18px 20px; text-align:left; }
-    .logo{ font-size:24px; font-weight:700; margin:0; display:inline-block; }
-    nav{ float:right; }
-    nav a{ color:white; margin-left:18px; text-decoration:none; font-weight:600; }
-    .hero{ padding:60px 20px; text-align:center; color:#05386b; }
-    .hero h2{ font-size:34px; margin:0 0 10px; color:#08306b; }
-    .container{ max-width:1000px; margin:0 auto; padding:30px; }
-    .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:20px; }
-    .card{ background:#fff; padding:20px; border-radius:10px; box-shadow:0 6px 18px rgba(10,40,120,0.08); border-left:6px solid #1a73e8; }
-    .btn{ background:#1a73e8; color:#fff; padding:12px 18px; border-radius:8px; text-decoration:none; display:inline-block; }
-    footer{ text-align:center; padding:18px; color:#333; margin-top:30px; }
-    /* acessibilidade */
-    .acessibilidade { font-size:20px !important; }
-  </style>
+        header {
+            padding: 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.25);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .container {
+            padding: 40px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #ffe;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.25);
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
+
 <body>
+    <header>
+        <h1>IncluRide</h1>
+        <p>Transporte acessível que respeita você.</p>
+    </header>
 
-<header>
-  <span class="logo">IncluRide</span>
-  <nav>
-    <a href="#sobre">Sobre</a>
-    <a href="#recursos">Recursos</a>
-    <a href="#contato">Contato</a>
-  </nav>
-</header>
+    <div class="container">
 
-<section class="hero">
-  <div class="container">
-    <h2>Mobilidade Inclusiva para Idosos e PCDs</h2>
-    <p>IncluRide — explicativo, bonito e acessível.</p>
-    <a class="btn" href="#recursos">Conheça</a>
-  </div>
-</section>
+        <div class="card">
+            <h2>📌 O que é o IncluRide?</h2>
+            <p>
+                O IncluRide é um aplicativo criado para garantir transporte seguro, rápido 
+                e totalmente acessível para pessoas com deficiência ou mobilidade reduzida.
+            </p>
+        </div>
 
-<div class="container" id="recursos">
-  <div class="cards">
-    <div class="card"><h3>Acessibilidade</h3><p>Fontes grandes, contraste e comandos por voz.</p></div>
-    <div class="card"><h3>Motoristas Treinados</h3><p>Atendimento com empatia.</p></div>
-    <div class="card"><h3>IA Integrada</h3><p>Assistência por voz e alertas de segurança.</p></div>
-    <div class="card"><h3>Veículos Adaptados</h3><p>Espaço e rampa para cadeira de rodas.</p></div>
-  </div>
-</div>
+        <div class="card">
+            <h2>📊 Problema que queremos resolver</h2>
+            <p>
+                Mais de <strong>77%</strong> das pessoas com deficiência já sofreram discriminação no transporte.  
+                E <strong>79%</strong> já perderam compromissos por falta de acessibilidade.  
+                O IncluRide existe para mudar isso.
+            </p>
+        </div>
 
-<footer>
-  IncluRide © 2025 — Inclusão também é movimento.
-</footer>
+        <div class="card">
+            <h2>💡 Como o app funciona?</h2>
+            <p>
+                • Motoristas treinados em acessibilidade<br>
+                • Veículos adaptados<br>
+                • Mapas inteligentes que evitam obstáculos<br>
+                • Atendimento seguro e humanizado
+            </p>
+        </div>
 
-<!-- pequeno script para remover fallback se style.css carregar com sucesso -->
-<script>
-  // tenta detectar se style.css carregou aplicando uma classe-fonte esperada
-  window.addEventListener('load', function(){
-    // Faz uma requisição para style.css para checar status (útil em hosts)
-    fetch('style.css', {method: 'HEAD'}).then(r=>{
-      if (r.ok) {
-        // style.css está lá — removemos o fallback inline para evitar duplicidade
-        const fallback = document.getElementById('fallback-style');
-        if (fallback) fallback.remove();
-      } else {
-        console.warn('style.css não retornou 200. Usando fallback inline.');
-      }
-    }).catch(err=>{
-      console.warn('Erro ao buscar style.css — usando fallback inline.', err);
-    });
-  });
-</script>
+        <div class="card">
+            <h2>🎯 Nosso objetivo</h2>
+            <p>
+                Tornar a mobilidade urbana mais inclusiva, permitindo que todas as pessoas 
+                se desloquem com autonomia e dignidade.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        IncluRide © 2025 — Mobilidade para todos.
+    </footer>
 
 </body>
 </html>
