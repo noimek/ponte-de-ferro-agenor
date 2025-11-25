@@ -1,91 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IncluRide - Mobilidade Inclusiva</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IncluRide - Mobilidade Inclusiva</title>
 
+  <!-- Link externo (garanta que style.css esteja na mesma pasta) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fallback inline: será usado se o style.css externo NÃO carregar -->
+  <style id="fallback-style">
+    /* fallback visual básico — vai garantir que tudo apareça */
+    html,body {
+      margin:0; padding:0; height:100%; font-family: Arial, sans-serif;
+      background: linear-gradient(135deg,#e6f0ff,#c9dfff);
+      -webkit-font-smoothing:antialiased;
+    }
+    header{ background:#1a73e8; color:white; padding:18px 20px; text-align:left; }
+    .logo{ font-size:24px; font-weight:700; margin:0; display:inline-block; }
+    nav{ float:right; }
+    nav a{ color:white; margin-left:18px; text-decoration:none; font-weight:600; }
+    .hero{ padding:60px 20px; text-align:center; color:#05386b; }
+    .hero h2{ font-size:34px; margin:0 0 10px; color:#08306b; }
+    .container{ max-width:1000px; margin:0 auto; padding:30px; }
+    .cards{ display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin-top:20px; }
+    .card{ background:#fff; padding:20px; border-radius:10px; box-shadow:0 6px 18px rgba(10,40,120,0.08); border-left:6px solid #1a73e8; }
+    .btn{ background:#1a73e8; color:#fff; padding:12px 18px; border-radius:8px; text-decoration:none; display:inline-block; }
+    footer{ text-align:center; padding:18px; color:#333; margin-top:30px; }
+    /* acessibilidade */
+    .acessibilidade { font-size:20px !important; }
+  </style>
+</head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1 class="logo">IncluRide</h1>
-        <nav>
-            <a href="#sobre">Sobre</a>
-            <a href="#recursos">Recursos</a>
-            <a href="#como-funciona">Como Funciona</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </header>
+<header>
+  <span class="logo">IncluRide</span>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#recursos">Recursos</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Mobilidade Inclusiva para Idosos e Pessoas com Deficiência</h2>
-        <p>Uma plataforma pensada para garantir acessibilidade, segurança e autonomia em cada deslocamento.</p>
-        <a href="#sobre" class="btn">Conheça o Projeto</a>
-    </section>
+<section class="hero">
+  <div class="container">
+    <h2>Mobilidade Inclusiva para Idosos e PCDs</h2>
+    <p>IncluRide — explicativo, bonito e acessível.</p>
+    <a class="btn" href="#recursos">Conheça</a>
+  </div>
+</section>
 
-    <!-- Sobre -->
-    <section id="sobre" class="section">
-        <h2>O que é a IncluRide?</h2>
-        <p>
-            A IncluRide é um aplicativo criado para resolver um problema real: 
-            idosos e pessoas com deficiência enfrentam dificuldades ao solicitar 
-            transportes comuns, como Uber ou táxis tradicionais. 
-        </p>
-        <p>
-            Nosso objetivo é garantir um transporte acessível, seguro e adaptado 
-            para cada necessidade.
-        </p>
-    </section>
+<div class="container" id="recursos">
+  <div class="cards">
+    <div class="card"><h3>Acessibilidade</h3><p>Fontes grandes, contraste e comandos por voz.</p></div>
+    <div class="card"><h3>Motoristas Treinados</h3><p>Atendimento com empatia.</p></div>
+    <div class="card"><h3>IA Integrada</h3><p>Assistência por voz e alertas de segurança.</p></div>
+    <div class="card"><h3>Veículos Adaptados</h3><p>Espaço e rampa para cadeira de rodas.</p></div>
+  </div>
+</div>
 
-    <!-- Recursos -->
-    <section id="recursos" class="section alt">
-        <h2>Recursos do Aplicativo</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Acessibilidade Total</h3>
-                <p>Botões maiores, leitura de tela e comandos por voz para quem tem dificuldade de visão ou mobilidade.</p>
-            </div>
-            <div class="card">
-                <h3>Motoristas Treinados</h3>
-                <p>Condutores preparados para auxiliar idosos e PCDs com segurança e respeito.</p>
-            </div>
-            <div class="card">
-                <h3>Veículos Adaptados</h3>
-                <p>Carros com rampa, espaço para cadeira de rodas e suporte adequado.</p>
-            </div>
-            <div class="card">
-                <h3>Assistente de IA</h3>
-                <p>Uma IA que ajuda o usuário a solicitar corridas, explicar funções e até alertar a família.</p>
-            </div>
-        </div>
-    </section>
+<footer>
+  IncluRide © 2025 — Inclusão também é movimento.
+</footer>
 
-    <!-- Como Funciona -->
-    <section id="como-funciona" class="section">
-        <h2>Como Funciona?</h2>
-        <ol class="steps">
-            <li>Abra o aplicativo IncluRide.</li>
-            <li>Use botões acessíveis ou comandos de voz para solicitar uma corrida.</li>
-            <li>A IA detecta sua necessidade e escolhe o melhor motorista adaptado.</li>
-            <li>Acompanhe a viagem em tempo real, com alertas para familiares.</li>
-        </ol>
-    </section>
-
-    <!-- Contato -->
-    <section id="contato" class="section alt">
-        <h2>Contato</h2>
-        <p>Quer saber mais ou apoiar o projeto?</p>
-        <p><b>Email:</b> contato@incluride.com</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>IncluRide © 2025 — Mobilidade Inclusiva</p>
-    </footer>
+<!-- pequeno script para remover fallback se style.css carregar com sucesso -->
+<script>
+  // tenta detectar se style.css carregou aplicando uma classe-fonte esperada
+  window.addEventListener('load', function(){
+    // Faz uma requisição para style.css para checar status (útil em hosts)
+    fetch('style.css', {method: 'HEAD'}).then(r=>{
+      if (r.ok) {
+        // style.css está lá — removemos o fallback inline para evitar duplicidade
+        const fallback = document.getElementById('fallback-style');
+        if (fallback) fallback.remove();
+      } else {
+        console.warn('style.css não retornou 200. Usando fallback inline.');
+      }
+    }).catch(err=>{
+      console.warn('Erro ao buscar style.css — usando fallback inline.', err);
+    });
+  });
+</script>
 
 </body>
 </html>
